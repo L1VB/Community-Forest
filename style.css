@@ -14,25 +14,44 @@ body{
     --c-2: #7dc358;
     --c-3: #4f2f0b;
     --c-4: #ece9e5;
+    --c-4-t: #ece9e54d;
     --c-5: #43a0bf;
     --c-6: #e03a33;
+
+    --fs-title: 60pt;
+    --fs-title-2: 36pt;
+    --fs-subH: 18pt;
+    --fs-subH-2: 12pt;
+    --fs-BT: 16px;
 }
 
 /* fonts */
 .italic{
-    font-style: italic;
+    font-style: italic !important;
 }
 .bold{
     font-weight: 700;
 }
 .line{
+    border-left: .13em var(--c-4) solid;
+    padding: .25em .5em;
+    height: fit-content;
+    width: 100%;
+}
+.line-2{
     border-left: 1.5px var(--c-4) solid;
     padding: .25em .5em;
     height: fit-content;
     width: 100%;
 }
+.line-h{
+    border-bottom: 1.55px var(--c-4) solid;
+    padding: .25em .5em;
+    height: fit-content;
+    width: 20em;
+}
 a{
-    color: var(--c-5);
+    color: var(--c-4);
     text-decoration: none;
 }
 a:hover{
@@ -43,74 +62,42 @@ a:hover{
     font-family: "tablet-gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 12pt;
+    font-size: var(--fs-BT);
 }
 
 .title{
     font-family: "amifer", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
-    font-size: 24pt;
+    font-size: var(--fs-title);
+    line-height: 0.9;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 .title-2{
     font-family: "amifer", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
-    font-size: 48pt;
+    font-size: var(--fs-title-2);
+    line-height: 1.2;
 }
 
 .subH{
     font-family: "tablet-gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 14pt;
+    font-size: var(--fs-subH);
+    line-height: 1.2;
 }
 .subH-2{
     font-family: "tablet-gothic", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 12pt;
-    text-transform: uppercase;
-}
-.subH-3{
-    font-family: "tablet-gothic", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24pt;
-}
-
-/* .title{
-    font-family: "ff-ernestine-pro", serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 24pt;
-}
-.title-2{
-    font-family: "ff-ernestine-pro", serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 48pt;
-}
-
-.subH{
-    font-family: "ff-ernestine-pro", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14pt;
-}
-.subH-2{
-    font-family: "ff-ernestine-pro", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 12pt;
+    font-size: var(--fs-subH-2);
     text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
 }
-.subH-3{
-    font-family: "ff-ernestine-pro", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24pt;
-} */
 
 /* pages */
 .landing{
@@ -119,46 +106,196 @@ a:hover{
     color: var(--c-4);
 }
 
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+
 /* navigation */
+nav{
+    position: fixed;
+    background-color: var(--c-4-t);
+}
 nav.desktop{
     width: 100%;
     height: fit-content;
-    padding: .5em 20px;
-    border-bottom: 1px var(--c-4) solid;
+    padding: 10px 40px 20px;
+    border-bottom: .2em var(--c-4) solid;
 }
 nav.desktop .container{
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-nav.desktop .container .links .content{
-    width: fit-content;
-    display: flex;
-    gap: 1em;
-}
-nav.desktop .container .logo{
-    width: auto;
-    height: 5dvh;
-}
-nav.desktop .container .logo img{
-    width: 100%;
-    height: 100%;
+    align-items: end;
+    gap: .5em;
 }
 
 /* content */
-header{
-    padding: 1em 20px;
+header.desktop{
+    width: 100dvw;
+    height: 100dvh;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(4, calc((100dvw - 80px - 60px) / 4));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
 }
+header.desktop .container{
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: auto;
+}
+
 
 .bg-img{
     background-image: url("https://i0.wp.com/www.nznatureguy.com/wp-content/uploads/2019/04/forest-3729279_1920.jpg?w=1512&ssl=1");
-    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: saturate(2) brightness(0.4);
     width: 100%;
     height: 100%;
     z-index: -1;
     position: absolute;
-    top: -5px;
+    top: 0;
     left: 0;
+}
+
+/* media queres */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root{
+        --fs-title: 26px;
+        --fs-title-2: 18px;
+        --fs-subH: 14px;
+        --fs-subH-2: 12px;
+        --fs-BT: 14px;
+    }
+    .line-h{
+        width: 5em;
+    }
+    .line{
+        border-left: 1.5px var(--c-4) solid;
+        padding: .25em .5em;
+        height: fit-content;
+        width: 100%;
+    }
+
+    nav.desktop{
+        display: none;
+    }
+    nav.mobile{
+        display: block;
+    }
+    header.desktop{
+        display: none;
+    }
+    header.mobile{
+        display: block;
+    }
+
+    nav.mobile{
+        width: 100%;
+        height: fit-content;
+        padding: 20px 20px;
+        border-bottom: 5px var(--c-4) solid;
+    }
+    nav.mobile .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    nav.mobile .container .logo a,
+    nav.mobile .container .menu a{
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        height: 20px;
+    }
+    nav.mobile .container .logo img,
+    nav.mobile .container .menu a img{
+        width: auto;
+        height: 100%;
+    }
+
+    header.mobile{
+        width: 100dvw;
+        height: 100dvh;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(4, calc((100dvw - 40px - 30px) / 4));
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+    }
+    header.mobile .container{
+        grid-row: 3;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        display: flex;
+        align-items: start;
+        width: 100%;
+        height: auto;
+    }
+    header.mobile .container .text{
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    :root{
+        --fs-title: 45px;
+        --fs-title-2: 28px;
+        --fs-subH: 14px;
+        --fs-subH-2: 12px;
+        --fs-BT: 16px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    :root{
+        --fs-title: 45pt;
+        --fs-title-2: 24pt;
+        --fs-subH: 14pt;
+        --fs-subH-2: 12pt;
+        --fs-BT: 16px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    :root{
+        --fs-title: 60pt;
+        --fs-title-2: 36pt;
+        --fs-subH: 18pt;
+        --fs-subH-2: 12pt;
+        --fs-BT: 16px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    :root{
+        --fs-title: 72pt;
+        --fs-title-2: 35pt;
+        --fs-subH: 18pt;
+        --fs-subH-2: 12pt;
+        --fs-BT: 18px;
+    }
 }
