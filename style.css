@@ -4,29 +4,161 @@
     padding: 0;
 }
 
-header{
-    margin: 20px;
+body{
+    color: var(--c-1);
+    background-color: var(--c-4);
 }
-header aside a{
-    display: flex;
-    align-items: center;
-    gap: .5em;
-    width: 100%;
-    height: 100%;
+
+:root{
+    --c-1: #224f0f;
+    --c-2: #7dc358;
+    --c-3: #4f2f0b;
+    --c-4: #ece9e5;
+    --c-5: #43a0bf;
+    --c-6: #e03a33;
 }
-header aside img.logo{
-    width: 3em;
-    height: 3em;
-    border-radius: 100%;
+
+/* fonts */
+.italic{
+    font-style: italic;
 }
-header aside img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.bold{
+    font-weight: 700;
 }
-header p{
-    border-left: 1px black solid;
+.line{
+    border-left: 1.5px var(--c-4) solid;
     padding: .25em .5em;
     height: fit-content;
     width: 100%;
+}
+a{
+    color: var(--c-5);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.BT{
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.title{
+    font-family: "amifer", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24pt;
+}
+.title-2{
+    font-family: "amifer", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 48pt;
+}
+
+.subH{
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14pt;
+}
+.subH-2{
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12pt;
+    text-transform: uppercase;
+}
+.subH-3{
+    font-family: "tablet-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24pt;
+}
+
+/* .title{
+    font-family: "ff-ernestine-pro", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24pt;
+}
+.title-2{
+    font-family: "ff-ernestine-pro", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 48pt;
+}
+
+.subH{
+    font-family: "ff-ernestine-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14pt;
+}
+.subH-2{
+    font-family: "ff-ernestine-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12pt;
+    text-transform: uppercase;
+}
+.subH-3{
+    font-family: "ff-ernestine-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24pt;
+} */
+
+/* pages */
+.landing{
+    width: 100dvw;
+    height: 100dvh;
+    color: var(--c-4);
+}
+
+/* navigation */
+nav.desktop{
+    width: 100%;
+    height: fit-content;
+    padding: .5em 20px;
+    border-bottom: 1px var(--c-4) solid;
+}
+nav.desktop .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav.desktop .container .links .content{
+    width: fit-content;
+    display: flex;
+    gap: 1em;
+}
+nav.desktop .container .logo{
+    width: auto;
+    height: 5dvh;
+}
+nav.desktop .container .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+/* content */
+header{
+    padding: 1em 20px;
+}
+
+.bg-img{
+    background-image: url("https://i0.wp.com/www.nznatureguy.com/wp-content/uploads/2019/04/forest-3729279_1920.jpg?w=1512&ssl=1");
+    object-fit: cover;
+    filter: saturate(2) brightness(0.4);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: -5px;
+    left: 0;
 }
