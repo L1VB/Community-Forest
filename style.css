@@ -18,11 +18,11 @@ body{
     --c-5: #43a0bf;
     --c-6: #e03a33;
 
-    --fs-title: 60pt;
-    --fs-title-2: 36pt;
-    --fs-subH: 18pt;
-    --fs-subH-2: 12pt;
-    --fs-BT: 16px;
+    --fs-title: 3.75rem;
+    --fs-title-2: 2rem;
+    --fs-subH: 1.75rem;
+    --fs-subH-2: 1rem;
+    --fs-BT: 1.2rem;
 }
 
 /* fonts */
@@ -76,10 +76,10 @@ a:hover{
 }
 .title-2{
     font-family: "amifer", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-size: var(--fs-title-2);
-    line-height: 1.2;
+    line-height: 0.9;
 }
 
 .subH{
@@ -91,7 +91,7 @@ a:hover{
 }
 .subH-2{
     font-family: "tablet-gothic", sans-serif;
-    font-weight: 600;
+    font-weight: 550;
     font-style: normal;
     font-size: var(--fs-subH-2);
     text-transform: uppercase;
@@ -106,10 +106,10 @@ a:hover{
     color: var(--c-4);
 }
 
-.desktop{
+#desktop{
     display: block;
 }
-.mobile{
+#mobile{
     display: none;
 }
 
@@ -118,13 +118,13 @@ nav{
     position: fixed;
     background-color: var(--c-4-t);
 }
-nav.desktop{
+nav#desktop{
     width: 100%;
     height: fit-content;
-    padding: 10px 40px 20px;
+    padding: 15px 40px 20px;
     border-bottom: .2em var(--c-4) solid;
 }
-nav.desktop .container{
+nav#desktop .container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -135,7 +135,7 @@ nav.desktop .container{
 }
 
 /* content */
-header.desktop{
+header{
     width: 100dvw;
     height: 100dvh;
     padding: 0 40px;
@@ -144,7 +144,7 @@ header.desktop{
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
-header.desktop .container{
+header .container{
     grid-row: 2;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -152,6 +152,13 @@ header.desktop .container{
     align-items: end;
     width: 100%;
     height: auto;
+}
+header .container .text{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -190,112 +197,70 @@ header.desktop .container{
         width: 100%;
     }
 
-    nav.desktop{
+    nav#desktop{
         display: none;
     }
-    nav.mobile{
-        display: block;
-    }
-    header.desktop{
-        display: none;
-    }
-    header.mobile{
+    nav#mobile{
         display: block;
     }
 
-    nav.mobile{
+    nav#mobile{
         width: 100%;
         height: fit-content;
         padding: 20px 20px;
         border-bottom: 5px var(--c-4) solid;
     }
-    nav.mobile .container{
+    nav#mobile .container{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
     
-    nav.mobile .container .logo a,
-    nav.mobile .container .menu a{
+    nav#mobile .container .logo a,
+    nav#mobile .container .menu a{
         display: flex;
         align-items: center;
         gap: .5em;
         height: 20px;
     }
-    nav.mobile .container .logo img,
-    nav.mobile .container .menu a img{
+    nav#mobile .container .logo img,
+    nav#mobile .container .menu a img{
         width: auto;
         height: 100%;
     }
 
-    header.mobile{
-        width: 100dvw;
-        height: 100dvh;
+    header{
         padding: 0 20px;
-        display: grid;
         grid-template-columns: repeat(4, calc((100dvw - 40px - 30px) / 4));
         grid-template-rows: repeat(3, 1fr);
         gap: 10px;
     }
-    header.mobile .container{
+    header .container{
         grid-row: 3;
-        grid-column-start: 1;
         grid-column-end: 5;
-        display: flex;
         align-items: start;
-        width: 100%;
-        height: auto;
-    }
-    header.mobile .container .text{
-        display: flex;
-        flex-direction: column;
-        gap: .5em;
-        padding: 0;
-        margin: 0;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     :root{
-        --fs-title: 45px;
-        --fs-title-2: 28px;
-        --fs-subH: 14px;
-        --fs-subH-2: 12px;
-        --fs-BT: 16px;
+        --fs-title-2: 1.5rem;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    :root{
-        --fs-title: 45pt;
-        --fs-title-2: 24pt;
-        --fs-subH: 14pt;
-        --fs-subH-2: 12pt;
-        --fs-BT: 16px;
-    }
+    
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    :root{
-        --fs-title: 60pt;
-        --fs-title-2: 36pt;
-        --fs-subH: 18pt;
-        --fs-subH-2: 12pt;
-        --fs-BT: 16px;
-    }
+    
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    :root{
-        --fs-title: 72pt;
-        --fs-title-2: 35pt;
-        --fs-subH: 18pt;
-        --fs-subH-2: 12pt;
-        --fs-BT: 18px;
-    }
+    
 }
