@@ -23,6 +23,8 @@ body{
     --fs-subH: 1.75rem;
     --fs-subH-2: 1rem;
     --fs-BT: 1.2rem;
+
+    --transition: 300ms ease;
 }
 
 /* fonts */
@@ -134,6 +136,91 @@ nav#desktop .container{
     gap: .5em;
 }
 
+nav#mobile{
+    width: 100%;
+    height: fit-content;
+    padding: 15px 20px;
+    border-bottom: 5px var(--c-4) solid;
+}
+nav#mobile .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav#mobile .container .logo a{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    height: 20px;
+}
+nav#mobile .container .logo img{
+    width: auto;
+    height: 100%;
+}
+
+nav#mobile .container .menu{
+    display: flex;
+}
+nav#mobile .container .menu .ham-menu{
+    width: 40px;
+    height: 20px;
+    margin-left: auto;
+    position: relative;
+    z-index: 10;
+}
+
+nav#mobile .container .menu .ham-menu span{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--transition);
+}
+nav#mobile .container .menu .ham-menu span:nth-child(1){
+    top: 25%;
+}
+nav#mobile .container .menu .ham-menu span:nth-child(3){
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.menu-open{
+    background-color: var(--c-4-t);
+    height: 100dvh;
+    width: 100%;
+    max-width: 70dvw;
+    position: fixed;
+    top: 0;
+    right: -71dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition);
+    z-index: 1;
+}
+.menu-open.active{
+    right: 0;
+}
+
 /* content */
 header{
     width: 100dvw;
@@ -202,32 +289,6 @@ header .container .text{
     }
     nav#mobile{
         display: block;
-    }
-
-    nav#mobile{
-        width: 100%;
-        height: fit-content;
-        padding: 20px 20px;
-        border-bottom: 5px var(--c-4) solid;
-    }
-    nav#mobile .container{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    nav#mobile .container .logo a,
-    nav#mobile .container .menu a{
-        display: flex;
-        align-items: center;
-        gap: .5em;
-        height: 20px;
-    }
-    nav#mobile .container .logo img,
-    nav#mobile .container .menu a img{
-        width: auto;
-        height: 100%;
     }
 
     header{
