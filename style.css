@@ -18,6 +18,7 @@ body{
     --c-5: #43a0bf;
     --c-6: #e03a33;
 
+    --fs-num: 4rem;
     --fs-title: 3.75rem;
     --fs-title-2: 2rem;
     --fs-subH: 1.75rem;
@@ -42,9 +43,7 @@ body{
 }
 .line-2{
     border-left: 1.5px var(--c-4) solid;
-    padding: .25em .5em;
-    height: fit-content;
-    width: 100%;
+    padding: 0 1em;
 }
 .line-h{
     border-bottom: 1.55px var(--c-4) solid;
@@ -54,7 +53,7 @@ body{
 }
 a{
     color: var(--c-4);
-    text-decoration: none;
+    text-decoration: none !important;
 }
 a:hover{
     text-decoration: underline;
@@ -67,14 +66,21 @@ a:hover{
     font-size: var(--fs-BT);
 }
 
+.num{
+    font-family: "amifer", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: var(--fs-num);
+    line-height: 0.9;
+    margin: -6px 0 0;
+}
+
 .title{
     font-family: "amifer", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: var(--fs-title);
     line-height: 0.9;
-    padding: 0 !important;
-    margin: 0 !important;
 }
 .title-2{
     font-family: "amifer", sans-serif;
@@ -163,6 +169,8 @@ nav#mobile .container .logo img{
 
 nav#mobile .container .menu{
     display: flex;
+    align-items: center;
+    gap: .5em;
 }
 nav#mobile .container .menu .ham-menu{
     width: 40px;
@@ -211,14 +219,69 @@ nav#mobile .container .menu .ham-menu.active span:nth-child(3){
     right: -101dvw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
     transition: var(--transition);
     z-index: 50;
 }
 .menu-open.active{
     right: 0;
+}
+
+.menu-open .container{
+    padding: 20px;
+    width: 100%;
+    height: 93dvh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: auto;
+}
+.menu-open .container .card-group{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.menu-open .container .card-group .card{
+    padding: 0 0 2em;
+}
+.menu-open .container .card-group .card .content{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.menu-open .container .card-group .card .content .text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    height: 100%;
+    position: relative;
+}
+
+
+.menu-open .container .card-group .card .content .text .vertical-line{
+    width: 2px;
+    height: 4rem;
+    background-color: var(--c-4);
+    flex-shrink: 0;
+}
+
+.menu-open .container .card-group .card .content .image{
+    width: 100%;
+    height: 15dvh;
+}
+.menu-open .container .card-group .card .content .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-open .container .bottom{
+    display: flex;
+    justify-content: space-between;
 }
 
 /* content */
