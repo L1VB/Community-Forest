@@ -141,6 +141,7 @@ nav#mobile{
     height: fit-content;
     padding: 15px 20px;
     border-bottom: 5px var(--c-4) solid;
+    z-index: 100;
 }
 nav#mobile .container{
     width: 100%;
@@ -168,7 +169,7 @@ nav#mobile .container .menu .ham-menu{
     height: 20px;
     margin-left: auto;
     position: relative;
-    z-index: 10;
+    z-index: 100;
 }
 
 nav#mobile .container .menu .ham-menu span{
@@ -179,43 +180,42 @@ nav#mobile .container .menu .ham-menu span{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     transition: var(--transition);
 }
 nav#mobile .container .menu .ham-menu span:nth-child(1){
-    top: 25%;
+    top: 0;
 }
 nav#mobile .container .menu .ham-menu span:nth-child(3){
-    top: 75%;
+    top: 100%;
 }
 
-.ham-menu.active span:nth-child(1){
+nav#mobile .container .menu .ham-menu.active span:nth-child(1){
     top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
 }
-.ham-menu.active span:nth-child(2){
+nav#mobile .container .menu .ham-menu.active span:nth-child(2){
     opacity: 0;
 }
-.ham-menu.active span:nth-child(3){
+nav#mobile .container .menu .ham-menu.active span:nth-child(3){
     top: 50%;
-    transform: translate(-50%, 50%) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg);
 }
 
 .menu-open{
-    background-color: var(--c-4-t);
+    background-color: var(--c-1);
     height: 100dvh;
-    width: 100%;
-    max-width: 70dvw;
+    width: 100dvw;
     position: fixed;
     top: 0;
-    right: -71dvw;
+    right: -101dvw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     transition: var(--transition);
-    z-index: 1;
+    z-index: 50;
 }
 .menu-open.active{
     right: 0;
