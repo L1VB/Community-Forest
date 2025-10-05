@@ -327,6 +327,12 @@ header .container .text{
 }
 
 /* animals */
+.animals:last-of-type{
+    height: 100%;
+    min-height: 80dvh;
+    padding: 2em 0;
+    background-color: var(--c-3);
+}
 .animals{
     height: 100%;
     min-height: 80dvh;
