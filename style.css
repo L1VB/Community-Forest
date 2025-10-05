@@ -29,9 +29,6 @@ body{
 }
 
 /* fonts */
-.italic{
-    font-style: italic !important;
-}
 .bold{
     font-weight: 600 !important;
     letter-spacing: 1px;
