@@ -417,8 +417,11 @@ header .container .text{
 }
 .animals .container .card .caption .banner .content{
     display: flex;
-    justify-content: space-between;
-    width: 50dvw;
+    justify-content: right;
+    gap: 1em;
+    width: 100%;
+    max-width: 80dvw;
+    text-align: right;
 }
 
 .animals .container .bottom{
