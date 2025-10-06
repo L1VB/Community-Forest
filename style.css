@@ -368,7 +368,7 @@ header .container .text{
 .animal-nature .container .carousel .card{
     height: fit-content;
     width: 100%;
-    padding: 0 0 1em;
+    padding: 0 0 1.25em;
     flex-shrink: 0;
     display: grid;
     grid-template-columns: repeat(4, 25dvw);
