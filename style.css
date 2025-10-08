@@ -4,9 +4,15 @@
     padding: 0;
 }
 
+body, html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body{
     color: var(--c-4);
     background-color: var(--c-4);
+    height: fit-content;
 }
 
 :root{
@@ -261,11 +267,11 @@ nav .container .menu .ham-menu.active span:nth-child(3){
 
 /* content */
 header{
-    width: 100dvw;
+    width: 100dvw; 
     height: 100dvh;
-    padding: 0 40px;
+    padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(4, calc((100dvw - 80px - 60px) / 4));
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
@@ -400,6 +406,13 @@ header .container .text{
     grid-column: 1 / 4;
     z-index: 1;
 }
+.animal-nature .container .card .image img#move-img{
+    background-image: url('https://i0.wp.com/www.nznatureguy.com/wp-content/uploads/2019/08/Dacrycarpus_dacrydioides__Kahikatea_White_pine_.jpg?resize=640,480&ssl=1');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
 .animal-nature .container .card .image .credit{
     display: flex;
     justify-content: center;
@@ -450,9 +463,11 @@ header .container .text{
 
 /* footer */
 footer{
-    background-color: var(--c-5);
-    height: 40dvh;
+    background-color: var(--c-4);
+    height: 100%;
+    min-height: 25dvh;
     width: 100%;
+    margin: 5dvh 0 2.5dvh;
 }
 
 
@@ -578,6 +593,15 @@ footer{
         align-items: center;
         width: 100%;
     }
+
+    /* footer */
+    footer{
+        background-color: var(--c-4);
+        height: 100%;
+        min-height: 25dvh;
+        width: 100%;
+        margin: 3dvh 0 calc(90px);
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -590,11 +614,7 @@ footer{
 
     /* information */
     .info{
-        height: 100%;
-        width: 100%;
         padding: 2dvh 0;
-        background-color: var(--c-4);
-        color: var(--c-1) !important;
     }
     .info .container .text .top{
         padding: 0 0 1.5em;
@@ -688,6 +708,9 @@ footer{
     }
 
     /* information */
+    .info{
+        padding: 5dvh 0;
+    }
     .info .container .text .top .title-3{
         font-size: 10.5vw;
         white-space: nowrap;
