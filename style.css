@@ -469,6 +469,11 @@ footer{
     width: 100%;
     margin: 5dvh 0 2.5dvh;
 }
+footer .container{
+    color: var(--c-3) !important;
+    padding: 20px;
+    text-align: center;
+}
 
 
 /* media queres */
