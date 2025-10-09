@@ -566,15 +566,6 @@ footer .container .up-botton{
         width: 100%;
     }
 
-    .landing{
-        width: 100dvw;
-        height: 93dvh;
-        overflow-y: auto;
-        position: relative;
-        margin: 7dvh 0 0;
-        padding: 0;
-    }
-
     .mobile-nav-top{
         display: block;
     }
