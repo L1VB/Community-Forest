@@ -295,11 +295,11 @@ nav .container .menu .ham-menu.active span:nth-child(3){
     gap: .5em;
 }
 .mobile-nav-top .container .logo{
-    width: 2.5dvw;
+    width: 2.5vh;
     height: 2.5dvh;
 }
 .mobile-nav-top .container img{
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
