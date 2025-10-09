@@ -135,7 +135,11 @@ a:hover{
     padding: 0;
     scroll-snap-type: y proximity;
 }
-header .container .text, .info, .animal-nature, footer{
+header .container .text{
+    top: 0;
+    position: sticky;
+}
+.info, .animal-nature, footer{
     top: 0;
     position: sticky;
     scroll-snap-align: center;
@@ -302,7 +306,7 @@ nav .container .menu .ham-menu.active span:nth-child(3){
 /* content */
 header{
     width: 100dvw; 
-    height: 100dvh;
+    height: 90dvh;
     padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -643,13 +647,12 @@ footer .container .up-botton{
     header{
         padding: 0 20px;
         grid-template-columns: repeat(4, calc((100dvw - 40px - 30px) / 4));
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         gap: 10px;
     }
     header .container{
         grid-row: 3;
-        grid-column-end: 4;
-        align-items: start;
+        grid-column-end: 5;
     }
 
     /* animal-nature */
