@@ -270,6 +270,33 @@ nav .container .menu .ham-menu.active span:nth-child(3){
     gap: .5em;
 }
 
+/* 'header' */
+.mobile-nav-top{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.mobile-nav-top .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.mobile-nav-top .container a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 3dvh;
+    gap: .5em;
+}
+.mobile-nav-top .container .logo{
+    width: auto;
+    height: 2dvh;
+}
+.mobile-nav-top .container img{
+    width: 100%;
+    height: 100%;
+}
+
 /* content */
 header{
     width: 100dvw; 
@@ -317,7 +344,7 @@ header .container .text{
     height: 100%;
     width: 100%;
     color: var(--c-1) !important;
-    padding: 20px 0;
+    padding: 0 0;
 }
 .info .container{
     display: flex;
@@ -483,20 +510,25 @@ footer .container{
     width: 100%;
     text-align: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    gap: 3em;
 }
 footer .container .links{
     color: var(--c-1) !important;
     text-align: left;
     display: flex;
     flex-wrap: wrap;
-    max-width: 50dvw;
+    max-width: 70dvw;
     align-items: center;
 }
 footer .container .links a{
     padding: .5em;
+}
+.footer-bottom{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 /* other links */
 footer .container .other-links{
@@ -511,7 +543,6 @@ footer .container .up-botton{
     border: 1px var(--c-1) solid;
     border-radius: 10em;
 }
-
 
 /* media queres */
 
@@ -533,6 +564,19 @@ footer .container .up-botton{
         padding: .25em .5em;
         height: fit-content;
         width: 100%;
+    }
+
+    .landing{
+        width: 100dvw;
+        height: 93dvh;
+        overflow-y: auto;
+        position: relative;
+        margin: 7dvh 0 0;
+        padding: 0;
+    }
+
+    .mobile-nav-top{
+        display: block;
     }
 
     /* navigation */
@@ -611,7 +655,7 @@ footer .container .up-botton{
     }
     header .container{
         grid-row: 3;
-        grid-column-end: 5;
+        grid-column-end: 4;
         align-items: start;
     }
 
@@ -730,9 +774,14 @@ footer .container .up-botton{
         width: 100%;
     }
 
+    /* mobile header */
+    .mobile-nav-top{
+        display: none;
+    }
+
     /* information */
     .info{
-        padding: 2dvh 0;
+        padding: 0 0;
     }
     .info .container .text .top{
         padding: 0 0 1.5em;
@@ -905,7 +954,7 @@ footer .container .up-botton{
 
     /* information */
     .info{
-        padding: 5dvh 0;
+        padding: 0 0;
     }
     .info .container .text .top .title-3{
         font-size: 10.5vw;
