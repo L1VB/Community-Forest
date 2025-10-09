@@ -133,10 +133,12 @@ a:hover{
     position: relative;
     margin: 10dvh 0 0;
     padding: 0;
+    scroll-snap-type: y proximity;
 }
 header .container .text, .info, .animal-nature, footer{
     top: 0;
     position: sticky;
+    scroll-snap-align: center;
 }
 
 /* navigation */
