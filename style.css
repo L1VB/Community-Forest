@@ -139,6 +139,9 @@ header .container .text{
     top: 0;
     position: sticky;
 }
+.info, .animal-nature{
+    margin: 0 0 -5dvh;
+}
 .info, .animal-nature, footer{
     top: 0;
     position: sticky;
@@ -374,13 +377,17 @@ header .container .text{
 
 /* animal-nature */
 .animal-nature:last-of-type{
-    background-color: var(--c-3);
+    background-color: var(--c-2);
 }
 .animal-nature{
     height: 100%;
     min-height: 80dvh;
-    padding: 2em 0;
-    background-color: var(--c-1);
+    background-image: url('image/b&w\ tree.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode:soft-light;
+    background-color: #3b781a;
+    opacity: 1;
 }
 .animal-nature .container{
     display: flex;
@@ -390,6 +397,7 @@ header .container .text{
     min-height: 80dvh;
     width: 100%;
     position: relative;
+    padding: 2em 0;
 }
 
 .animal-nature .container .about{
