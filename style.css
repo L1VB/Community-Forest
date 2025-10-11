@@ -377,7 +377,7 @@ header .container .text{
 
 /* animal-nature */
 .animal-nature:last-of-type{
-    background-color: var(--c-2);
+    background-color: var(--c-3);
 }
 .animal-nature{
     height: 100%;
@@ -386,7 +386,7 @@ header .container .text{
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode:soft-light;
-    background-color: #3b781a;
+    background-color: var(--c-1);
     opacity: 1;
 }
 .animal-nature .container{
