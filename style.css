@@ -361,6 +361,11 @@ header .container .text{
     align-items: center;
     width: 100%;
     min-height: 50dvh;
+
+    background-image: url('https://i0.wp.com/www.nznatureguy.com/wp-content/uploads/2019/04/forest-3729279_1920.jpg?w=1512&ssl=1');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
     background-color: var(--c-4);
 }
 .info .container .text{
@@ -385,7 +390,7 @@ header .container .text{
     background-image: url('image/b&w\ tree.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode:soft-light;
+    background-blend-mode: soft-light;
     background-color: var(--c-1);
     opacity: 1;
 }
