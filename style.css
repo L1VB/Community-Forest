@@ -203,14 +203,14 @@ nav .container .menu .ham-menu span:nth-child(3){
     top: 100%;
 }
 
-nav .container .menu .ham-menu.active span:nth-child(1){
+nav .container .menu.active .ham-menu span:nth-child(1){
     top: 50%;
     transform: translateX(-50%) rotate(45deg);
 }
-nav .container .menu .ham-menu.active span:nth-child(2){
+nav .container .menu.active .ham-menu span:nth-child(2){
     opacity: 0;
 }
-nav .container .menu .ham-menu.active span:nth-child(3){
+nav .container .menu.active .ham-menu span:nth-child(3){
     top: 50%;
     transform: translateX(-50%) rotate(-45deg);
 }
@@ -577,15 +577,11 @@ footer .container .up-botton{
     }
 
     /* navigation */
-    nav{
+    nav .menu{
         position: fixed;
         background-color: var(--c-5);
         bottom: 20px;
         right: 20px;
-        width: fit-content !important;
-    }
-    nav{
-        width: fit-content;
         height: fit-content;
         border-radius: 3em;
         padding: 15px 20px;

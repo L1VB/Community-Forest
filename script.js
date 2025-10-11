@@ -1,4 +1,4 @@
-const hamMenu = document.querySelector('.ham-menu');
+const hamMenu = document.querySelector('.menu');
 const openMenu = document.querySelector('.menu-open');
 const openNav = document.querySelector('nav');
 
