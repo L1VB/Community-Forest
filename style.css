@@ -159,7 +159,8 @@ nav .container .logo a{
     height: 20px;
 }
 nav .container .logo .logo-icon{
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 nav .container .logo img{
     width: auto;
@@ -281,10 +282,6 @@ nav .container .menu.active .ham-menu span:nth-child(3){
 .mobile-nav-top .container{
     width: 100%;
     display: flex;
-    align-items: center;
-}
-.mobile-nav-top .container a{
-    display: flex;
     flex-direction: row;
     align-items: center;
     height: 40px;
@@ -363,7 +360,7 @@ header .container .text{
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 50dvh;
+    height: 50dvh;
     border-top: 2px var(--c-1) solid;
     border-bottom: 2px var(--c-1) solid;
     background-image: url('https://i0.wp.com/www.nznatureguy.com/wp-content/uploads/2019/04/forest-3729279_1920.jpg?w=1512&ssl=1');
@@ -566,6 +563,7 @@ footer .container .other-links details a{
 footer .container .up-botton{
     padding: 1em 1.25em;
     border: 2px var(--c-4) solid;
+    background-color: var(--c-3);
     border-radius: 10em;
 }
 
@@ -829,8 +827,7 @@ footer .container .up-botton{
 
     /* header */
     header{
-        padding: 5dvh 0 20px;
-        height: 100dvh;
+        padding: 4dvh 0 20px;
         width: 100dvw;
     }
     
@@ -862,6 +859,9 @@ footer .container .up-botton{
     /* information */
     .info{
         padding: 0 0;
+    }
+    .info .container{
+        min-height: 300px;
     }
     .info .container .text .top{
         padding: 0 0 1.5em;
