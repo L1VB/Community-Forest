@@ -10,7 +10,7 @@ body, html {
 }
 
 body{
-    color: var(--c-4);
+    color: var(--c-1);
     background-color: var(--c-4);
     height: fit-content;
 }
@@ -77,12 +77,14 @@ a:hover{
     font-weight: 400;
     font-style: normal;
     font-size: var(--fs-BT);
+    color: inherit;
 }
 .des{
     font-family: "tablet-gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: var(--fs-subH-2);
+    color: inherit;
 }
 
 .title{
@@ -91,6 +93,7 @@ a:hover{
     font-style: normal;
     font-size: var(--fs-title);
     line-height: 0.9;
+    color: inherit;
 }
 .title-2{
     font-family: "amifer", sans-serif;
@@ -98,6 +101,7 @@ a:hover{
     font-style: normal;
     font-size: var(--fs-title-2);
     line-height: 0.9;
+    color: inherit;
 }
 .title-3{
     font-family: "amifer", sans-serif;
@@ -106,6 +110,7 @@ a:hover{
     font-size: var(--fs-num);
     line-height: 0.9;
     margin: -6px 0 0;
+    color: inherit;
 }
 
 .subH{
@@ -114,6 +119,7 @@ a:hover{
     font-style: normal;
     font-size: var(--fs-subH);
     line-height: 1.2;
+    color: inherit;
 }
 .subH-2{
     font-family: "tablet-gothic", sans-serif;
@@ -123,30 +129,11 @@ a:hover{
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1;
+    color: inherit;
 }
 
 /* pages */
-.landing{
-    width: 100dvw;
-    height: 90dvh;
-    overflow-y: auto;
-    position: relative;
-    margin: 10dvh 0 0;
-    padding: 0;
-    scroll-snap-type: y proximity;
-}
-header .container .text{
-    top: 0;
-    position: sticky;
-}
-.info, .animal-nature{
-    margin: 0 0 -5dvh;
-}
-.info, .animal-nature, footer{
-    top: 0;
-    position: sticky;
-    scroll-snap-align: center;
-}
+
 
 /* navigation */
 nav{
@@ -170,6 +157,9 @@ nav .container .logo a{
     gap: .5em;
     height: 20px;
 }
+nav .container .logo .logo-icon{
+    height: 20px;
+}
 nav .container .logo img{
     width: auto;
     height: 100%;
@@ -191,7 +181,7 @@ nav .container .menu .ham-menu{
 nav .container .menu .ham-menu span{
     width: 100%;
     height: 3px;
-    background-color: var(--c-4);
+    background-color: var(--c-1);
     border-radius: 25px;
     position: absolute;
     top: 50%;
@@ -220,6 +210,7 @@ nav .container .menu.active .ham-menu span:nth-child(3){
 
 .menu-open{
     background-color: var(--c-3); /* colour change? */
+    color: var(--c-4);
     height: 100dvh;
     width: 100dvw;
     position: fixed;
@@ -284,6 +275,7 @@ nav .container .menu.active .ham-menu span:nth-child(3){
     position: absolute;
     top: 20px;
     left: 20px;
+    color: var(--c-4);
 }
 .mobile-nav-top .container{
     width: 100%;
@@ -309,28 +301,38 @@ nav .container .menu.active .ham-menu span:nth-child(3){
 /* content */
 header{
     width: 100dvw; 
-    height: 90dvh;
-    padding: 0 20px;
+    height: 98dvh;
+    padding: 0 0;
+}
+header .container{
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
-header .container{
-    grid-row: 2;
+header .container .image-container{
+    grid-row: 1 / 2;
     grid-column-start: 1;
     grid-column-end: 4;
-    display: flex;
-    align-items: end;
+}
+header .container .image-container img{
+    object-fit: cover;
+    height: 100%;
     width: 100%;
-    height: auto;
 }
 header .container .text{
     display: flex;
     flex-direction: column;
     gap: .5em;
-    padding: 0;
+    padding: 0 20px;
     margin: 0;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 
@@ -393,6 +395,7 @@ header .container .text{
     background-blend-mode: soft-light;
     background-color: var(--c-1);
     opacity: 1;
+    color: var(--c-4);
 }
 .animal-nature .container{
     display: flex;
@@ -592,7 +595,8 @@ footer .container .up-botton{
     /* navigation */
     nav .menu{
         position: fixed;
-        background-color: var(--c-5);
+        background-color: var(--c-1);
+        color: var(--c-4);
         bottom: 20px;
         right: 20px;
         height: fit-content;
@@ -636,8 +640,8 @@ footer .container .up-botton{
         width: 75%;
     }
     /* nav active */
-    nav.active{
-        right: 0;
+    nav.active .menu{
+        right: 0 !important;
         width: fit-content;
         height: fit-content;
         border-radius: 3em 0 0 3em;
@@ -651,16 +655,47 @@ footer .container .up-botton{
     .menu-open .container .card-group .card .content .img-cover{
         display: none;
     }
+    nav .container .menu .ham-menu span{
+        background-color: var(--c-4);
+    }
 
     /* header */
     header{
-        padding: 0 20px;
+        padding: 0 20px 20px;
+        height: 100dvh;
+        width: 100dvw;
+    }
+    
+    header .container{
+        display: flex;
+        align-items: start;
+        width: 100%;
+        height: 100%;
+        display: grid;
         grid-template-columns: repeat(4, calc((100dvw - 40px - 30px) / 4));
         grid-template-rows: repeat(4, 1fr);
         gap: 10px;
     }
-    header .container{
-        grid-row: 3;
+    header .container .image-container{
+        height: 100%;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    header .container .image-container img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    header .container .text{
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        padding: 0;
+        margin: 0;
+        grid-row: 4;
+        grid-column-start: 1;
         grid-column-end: 5;
     }
 
@@ -782,6 +817,38 @@ footer .container .up-botton{
     /* mobile header */
     .mobile-nav-top{
         display: none;
+    }
+
+    /* header */
+    header{
+        padding: 5dvh 0 20px;
+        height: 100dvh;
+        width: 100dvw;
+    }
+    
+    header .container{
+        display: flex;
+        align-items: start;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+    }
+    header .container .image-container{
+        height: 100%;
+        width: 100%;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    header .container .text{
+        padding: 0 20px;
+        grid-row: 4;
+        grid-column-start: 1;
+        grid-column-end: 5;
     }
 
     /* information */
@@ -906,9 +973,6 @@ footer .container .up-botton{
 
     .menu-open .container .card-group .card:nth-child(2) .content{
         justify-content: flex-end;
-    }
-    .menu-open .container .card-group .card .content .img-cover#left-img{
-        display: none;
     }
 
     .menu-open .container .card-group .card .text{
