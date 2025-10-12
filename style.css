@@ -143,6 +143,7 @@ nav{
     padding: 15px 20px;
     z-index: 100;
     transition: var(--transition);
+    background-color: var(--c-4);
 }
 nav .container{
     width: 100%;
@@ -590,9 +591,15 @@ footer .container .up-botton{
 
     .mobile-nav-top{
         display: block;
+        background-color: var(--c-1);
+        width: calc(100% - 20px);
+        border-radius: 5em 0 0 5em;
     }
 
     /* navigation */
+    nav{
+        background-color: #ece9e500;
+    }
     nav .menu{
         position: fixed;
         background-color: var(--c-1);
