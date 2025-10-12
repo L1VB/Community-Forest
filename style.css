@@ -167,6 +167,9 @@ nav .container .logo img{
     height: 100%;
 }
 
+nav .container .menu.disable{
+    display: none;
+}
 nav .container .menu{
     display: flex;
     align-items: center;
@@ -312,12 +315,14 @@ header .container{
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
-header .container .image-container{
+header .container .image-container,
+header .container .map-container iframe{
     grid-row: 1 / 2;
     grid-column-start: 1;
     grid-column-end: 4;
 }
-header .container .image-container img{
+header .container .image-container img,
+header .container .map-container iframe{
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -515,6 +520,70 @@ header .container .text{
     left: 0;
 }
 
+/* map */
+/* .map{
+    position: fixed;
+    background-color: var(--c-5);
+    color: var(--c-4);
+    bottom: 20px;
+    left: 20px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 3em;
+    padding: 7.5px 20px 7.5px 15px;
+    z-index: 100;
+    transition: var(--transition);
+}
+.map .container{
+    display: flex;
+    align-items: center;
+    gap: .75em;
+}
+.map .container .map-icon{
+    width: 20px;
+    height: 30px;
+}
+.map .container .map-icon img{
+    width: auto;
+    height: 100%;
+    background-position: center;
+}
+
+.map.disable{
+    display: none;
+}
+.map-open.active{
+    left: 0;
+}
+
+.map-open{
+    background-color: var(--c-5);
+    color: var(--c-4);
+    height: 100dvh;
+    width: 100dvw;
+    position: fixed;
+    top: 0;
+    left: -101dvw;
+    transition: var(--transition);
+    z-index: 50;
+}
+.map-open .container iframe{
+    width: 100%;
+    height: calc(100dvh - 80px);
+    padding: 0 20px;
+}
+.map.active{
+    background-color: var(--c-4);
+    color: var(--c-5);
+    padding: 15px 20px 15px 20px;
+    border-radius: 0 3em 3em 0;
+    left: 0;
+    transition: var(--transition);
+}
+.map.active .container .map-icon{
+    display: none;
+} */
+
 /* footer */
 footer{
     background-color: var(--c-1);
@@ -669,7 +738,7 @@ footer .container .up-botton{
     /* header */
     header{
         padding: 0 20px 20px;
-        height: 100dvh;
+        height: 99dvh;
         width: 100dvw;
     }
     
@@ -690,10 +759,25 @@ footer .container .up-botton{
         grid-column-start: 1;
         grid-column-end: 5;
     }
-    header .container .image-container img{
+    header .container#map{
+        height: 100%;
+        align-items: start;
+        grid-template-rows: repeat(5, 1fr);
+    }
+    header .container .map-container{
+        height: 100%;
+        padding: 5em 0 0;
+        grid-row: 1 / 5;
+        grid-column: 1 / 5;
+    }
+    header .container .image-container img,
+    header .container .map-container iframe{
         object-fit: cover;
         height: 100%;
         width: 100%;
+    }
+    header .container#map .text{
+        grid-row: 5;
     }
     header .container .text{
         display: flex;
