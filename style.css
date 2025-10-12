@@ -739,7 +739,6 @@ footer .container .up-botton{
 
     /* footer */
     footer{
-        background-color: var(--c-4);
         height: 100%;
         min-height: 25dvh;
         width: 100%;
