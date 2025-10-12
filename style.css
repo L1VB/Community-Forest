@@ -364,7 +364,8 @@ header .container .text{
     align-items: center;
     width: 100%;
     min-height: 50dvh;
-
+    border-top: 2px var(--c-1) solid;
+    border-bottom: 2px var(--c-1) solid;
     background-image: url('https://i0.wp.com/www.nznatureguy.com/wp-content/uploads/2019/04/forest-3729279_1920.jpg?w=1512&ssl=1');
     background-position: center;
     background-repeat: no-repeat;
@@ -397,6 +398,7 @@ header .container .text{
     background-color: var(--c-1);
     opacity: 1;
     color: var(--c-4);
+    margin: 20px 0;
 }
 .animal-nature .container{
     display: flex;
@@ -518,13 +520,13 @@ header .container .text{
 
 /* footer */
 footer{
-    background-color: var(--c-4);
-    color: var(--c-1) !important;
+    background-color: var(--c-1);
+    color: var(--c-4);
     height: 100%;
     min-height: 25dvh;
     max-height: 50dvh;
     width: 100%;
-    margin: 5dvh 0 2.5dvh;
+    margin: 2.5dvh 0 0;
     display: flex;
     align-items: center;
 }
@@ -538,7 +540,7 @@ footer .container{
     gap: 3em;
 }
 footer .container .links{
-    color: var(--c-1) !important;
+    color: var(--c-4) !important;
     text-align: left;
     display: flex;
     flex-wrap: wrap;
@@ -563,7 +565,7 @@ footer .container .other-links details a{
 /* button up */
 footer .container .up-botton{
     padding: 1em 1.25em;
-    border: 1px var(--c-1) solid;
+    border: 2px var(--c-4) solid;
     border-radius: 10em;
 }
 
