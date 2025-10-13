@@ -940,6 +940,21 @@ footer .container .up-botton{
         grid-column-end: 5;
     }
 
+    header .container#map{
+        height: 100%;
+        align-items: start;
+        grid-template-rows: repeat(5, 1fr);
+    }
+    header .container .map-container{
+        height: 100%;
+        padding: 1.5em 0 0;
+        grid-row: 1 / 5;
+        grid-column: 1 / 5;
+    }
+    header .container#map .text{
+        grid-row: 5;
+    }
+
     /* information */
     .info{
         padding: 0 0;
@@ -1106,11 +1121,26 @@ footer .container .up-botton{
         display: block;
     }
 }
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     :root{
         --fs-title-2: 2rem;
         --fs-BT: 1.4rem;
+    }
+
+    /* header */
+    header .container .text{
+        grid-column: 1 / 4;
+    }
+
+    header .container .map-container{
+        grid-row: 1 / 6;
+        grid-column: 2 / 5;
+    }
+    header .container#map .text{
+        grid-row: 4 / 5;
+        grid-column: 1;
     }
 
     /* information */
