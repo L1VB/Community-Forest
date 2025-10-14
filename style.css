@@ -1141,6 +1141,11 @@ footer .container .up-botton{
         --fs-BT: 1.4rem;
     }
 
+    /* nav */
+    nav .container .menu:hover{
+        cursor: pointer;
+    }
+
     /* header */
     header .container .text{
         grid-column: 1 / 4;
