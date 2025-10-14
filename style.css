@@ -27,7 +27,9 @@ body{
     /* --c-3: #4f2f0b; */
     --c-4-t: #ece9e54d;
 
-    --c-4: #ece9e5;
+    --c-4: #f4f2ef;
+
+    /* --c-4: #ece9e5; */
     --c-5: hsl(from var(--c-1) calc(h - 180) s l);
     /* --c-5: #43a0bf; */
     --c-6: #e03a33;
