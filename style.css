@@ -554,21 +554,21 @@ header .container .text{
 .btn-up-down .container{
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 55%;
     height: fit-content;
 }
 .btn-up-down .container .btn-up,
 .btn-up-down .container .btn-down{
-    width: auto;
-    height: 5.5dvh;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
 }
-.btn-up-down .container .btn-up img,
-.btn-up-down .container .btn-down img{
+.btn-up img,
+.btn-down img{
     background-color: var(--c-3);
     border-radius: 50%;
     height: 100%;
@@ -586,6 +586,7 @@ footer{
     margin: 2.5dvh 0 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 footer .container{
     padding: 20px;
@@ -611,20 +612,17 @@ footer .container .links a{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 /* other links */
 footer .container .other-links{
     text-align: left;
+    display: flex;
+    gap: 1em;
 }
-footer .container .other-links details a{
-    padding: 1em 0;
-}
-/* button up */
-footer .container .up-botton{
-    padding: 1em 1.25em;
-    border: 2px var(--c-4) solid;
-    background-color: var(--c-3);
-    border-radius: 10em;
+footer .btn-up img:hover,
+footer .btn-down img:hover{
+    background-color: var(--c-5);
 }
 
 /* media queres */
@@ -820,6 +818,9 @@ footer .container .up-botton{
     .btn-up-down{
         left: 20px;
     }
+    .btn-up-down .container{
+        gap: .5em;
+    }
 
     /* footer */
     footer{
@@ -918,6 +919,8 @@ footer .container .up-botton{
     .btn-up-down .container{
         width: 30%;
         gap: 1em;
+        flex-direction: column;
+        align-items: flex-end;
         justify-self: right;
     }
 
@@ -1045,6 +1048,11 @@ footer .container .up-botton{
         width: 60dvw;
         justify-content: right;
         gap: 1em;
+    }
+
+    /* footer */
+    footer .container{
+        width: 70%;
     }
 }
 
@@ -1243,5 +1251,11 @@ footer .container .up-botton{
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    .btn-up-down .container{
+        width: 30%;
+        gap: 1em;
+        flex-direction: row;
+        justify-content: flex-end;
+        justify-self: right;
+    }
 }
