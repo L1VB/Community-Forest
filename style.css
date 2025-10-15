@@ -24,7 +24,7 @@ body{
     
     /* --c-1: #224f0f; */
     /* --c-2: #7dc358; */
-    /* --c-3: #4f2f0b; */
+    --c-2: #4f2f0b;
     --c-4-t: #ece9e54d;
 
     --c-4: #f4f2ef;
@@ -392,8 +392,8 @@ header .container .text{
 }
 
 /* animal-nature */
-.animal-nature:last-of-type{
-    background-color: var(--c-3);
+.animal-nature#nature{
+    background-color: var(--c-2);
 }
 .animal-nature{
     height: 100%;
@@ -579,7 +579,7 @@ header .container .text{
 
 /* footer */
 footer{
-    background-color: var(--c-1);
+    background-color: var(--c-3);
     color: var(--c-4);
     height: 100%;
     min-height: 25dvh;
@@ -604,7 +604,6 @@ footer .container .links{
     text-align: left;
     display: flex;
     flex-wrap: wrap;
-    max-width: 70dvw;
     align-items: center;
 }
 footer .container .links a{
@@ -622,8 +621,8 @@ footer .container .other-links{
     display: flex;
     gap: 1em;
 }
-footer .btn-up img:hover,
-footer .btn-down img:hover{
+footer .btn-up img,
+footer .btn-down img{
     background-color: var(--c-5);
 }
 
@@ -829,7 +828,8 @@ footer .btn-down img:hover{
         height: 100%;
         min-height: 25dvh;
         width: 100%;
-        margin: 3dvh 0 calc(90px);
+        justify-content: left;
+        padding: 0 0 4em;
     }
 }
 
