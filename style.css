@@ -1101,6 +1101,9 @@ footer .btn-down img{
         flex-direction: column;
         gap: .5em;
     }
+    .menu-open .container .card-group .card .content .img-cover#left-img{
+        display: block;
+    }
     .menu-open .container .card-group .card .content .img-cover#right-img{
         display: none;
     }
@@ -1325,6 +1328,12 @@ footer .btn-down img{
         width: 100%;
         max-width: 150px;
         height: 15dvh;
+    }
+    .menu-open .container .card-group .card .content .img-cover#left-img{
+        display: none;
+    }
+    .menu-open .container .card-group .card .content .img-cover#right-img{
+        display: block;
     }
     .menu-open .container .card-group .card .content .img-cover img{
         width: 100%;
