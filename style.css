@@ -1355,6 +1355,51 @@ footer .btn-down img{
         min-height: 55dvw;
     }
 
+    /* about */
+    .about .container .important .content .people{
+        max-width: 100% !important;
+        width: 100dvw;
+        display: grid;
+        grid-template-columns: repeat(4, calc(25dvw - 25px));
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+    .about .container .important .content .text .card:first-of-type{
+        grid-column: 1 / 3;
+        grid-row: 1;
+        width: 100%;
+    }
+    .about .container .important .content .text .card:last-of-type{
+        grid-column: 3 / 5;
+        grid-row: 1;
+        width: 100%;
+    }
+
+    .about .container .important .content .sponsors{
+        max-width: 100% !important;
+        width: 100dvw;
+        display: grid;
+        grid-template-columns: repeat(3, calc(33.333dvw - 25px));
+        grid-template-rows: 1fr;
+        gap: 20px;
+        padding: 1em 0 0;
+    }
+    .about .container .important .content .text .sponsors .card:nth-of-type(1){
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+    }
+    .about .container .important .content .text .sponsors .card:nth-of-type(2){
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+    }
+    .about .container .important .content .text .sponsors .card:nth-of-type(3){
+        grid-column: 3;
+        grid-row: 1;
+        width: 100%;
+    }
+
     /* footer */
     footer .btn-up{
         width: 6dvw;
