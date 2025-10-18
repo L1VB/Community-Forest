@@ -630,7 +630,6 @@ footer .btn-up{
     border-radius: 2em 0 0 2em;
     height: fit-content;
     color: var(--c-4);
-    max-width: 85%;
     background-color: #3b781a;
 }
 .about .container .important{
@@ -974,7 +973,6 @@ footer .btn-down img{
         margin: 0 0 0 0;
         border-radius: 0 0 0 0;
         color: var(--c-1);
-        max-width: 100%;
         background-color: #ece9e500;
     }
     .about .container .important{
