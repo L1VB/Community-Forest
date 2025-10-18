@@ -747,6 +747,7 @@ footer .container .links a{
 footer .container .other-links{
     text-align: left;
     display: flex;
+    align-items: center;
     gap: .75em;
 }
 footer .btn-up img,
