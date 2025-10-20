@@ -613,9 +613,9 @@ footer .btn-up{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
-    row-gap: 2em;
+    row-gap: 5em;
     column-gap: 20px;
-    padding: 3em 20px;
+    padding: 5em 20px;
     width: 100dvw;
 }
 .about .container .path{
@@ -682,7 +682,7 @@ footer .btn-up{
 .about .container .important .content{
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: 2em;
 }
 .about .container .important .content .text{
     display: flex;
@@ -957,9 +957,9 @@ footer .btn-down img{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
-        row-gap: 2em;
+        row-gap: 10dvh;
         column-gap: 10px;
-        padding: 20px 20px 2em;
+        padding: 3em 20px 20px;
         width: 100dvw;
     }
     .about .container .path{
@@ -986,7 +986,7 @@ footer .btn-down img{
         display: flex;
         flex-direction: column;
         gap: 1em;
-        padding: 8.5dvw 0 0;
+        padding: 11dvw 0 0;
     }
     .about .container .path .content .text{
         display: flex;
